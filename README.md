@@ -1,12 +1,12 @@
-﻿# 🚀 Packet Drop Simulator using SDN (POX + Mininet)
+﻿# Packet Drop Simulator using SDN (POX + Mininet)
 
-## 📌 Project Title
+## Project Title
 
 Packet Drop Simulator
 
 ---
 
-## 🎯 Objective
+## Objective
 
 Simulate packet loss using SDN flow rules by selectively dropping packets between specific hosts while allowing normal communication for others.
 
@@ -21,7 +21,7 @@ Simulate packet loss using SDN flow rules by selectively dropping packets betwee
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 Packet-Drop-Simulator/
 │── packet_drop.py (Controller logic)
@@ -32,7 +32,7 @@ Packet-Drop-Simulator/
 
 ---
 
-## ⚙️ Setup and Execution Steps
+## Setup and Execution Steps
 
 ### Step 1: Clean previous Mininet state
 
@@ -54,9 +54,9 @@ sudo python3 topology.py
 
 ---
 
-## 🧪 Testing Commands (Mininet CLI)
+## Testing Commands (Mininet CLI)
 
-### ✅ Allowed Traffic
+### Allowed Traffic
 
 h1 ping h2
 
@@ -67,7 +67,7 @@ Expected:
 
 ---
 
-### ❌ Blocked Traffic
+### Blocked Traffic
 
 h1 ping h3
 
@@ -78,13 +78,13 @@ Expected:
 
 ---
 
-### 📊 Network Summary
+### Network Summary
 
 pingall
 
 ---
 
-## 🔍 Flow Table Verification
+## Flow Table Verification
 
 Run in new terminal:
 sudo ovs-ofctl dump-flows s1
@@ -96,7 +96,7 @@ Expected:
 
 ---
 
-## 🧪 Validation (Regression Test)
+## Validation (Regression Test)
 
 sudo python3 regression_test.py
 
@@ -107,39 +107,39 @@ Expected:
 
 ---
 
-## 📸 Output Screenshots
+## Output Screenshots
 
-### Screenshot 1
+### Controller Startup and Switch Connection
 
 ![Screenshot 1](Output/output%201.jpeg)
 
-### Screenshot 2
+### Mininet Topology Initialization
 
 ![Screenshot 2](Output/output%202.jpeg)
 
-### Screenshot 3
+### Allowed Traffic: h1 to h2 Ping Success
 
 ![Screenshot 3](Output/output%203.jpeg)
 
-### Screenshot 4
+### Blocked Traffic: h1 to h3 Ping Attempt
 
 ![Screenshot 4](Output/output%204.jpeg)
 
-### Screenshot 5
+### Controller Drop Logs for h1 to h3
 
 ![Screenshot 5](Output/output%205.jpeg)
 
-### Screenshot 6
+### Flow Table with Drop Rule
 
 ![Screenshot 6](Output/output%206.jpeg)
 
-### Screenshot 7
+### Pingall Reachability Summary
 
 ![Screenshot 7](Output/output%207.jpeg)
 
 ---
 
-## 🎯 Expected Results
+## Expected Results
 
 | Test Case | Result  |
 | --------- | ------- |
@@ -149,7 +149,7 @@ Expected:
 
 ---
 
-## 🧠 Working Principle
+## Working Principle
 
 - Switch sends packets to controller when no rule exists
 - Controller inspects IPv4 source and destination
@@ -160,13 +160,7 @@ Expected:
 
 ---
 
-## 🎤 Viva Explanation
-
-This project demonstrates SDN-based traffic control where the controller dynamically installs flow rules to block specific communication while allowing others.
-
----
-
-## ✅ Conclusion
+## Conclusion
 
 The project successfully:
 
@@ -177,6 +171,6 @@ The project successfully:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Varun M L
