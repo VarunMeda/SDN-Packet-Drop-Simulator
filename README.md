@@ -22,7 +22,7 @@ Simulate packet loss using SDN flow rules by selectively dropping packets betwee
 Packet-Drop-Simulator/
 │── packet_drop.py        (Controller logic)
 │── topology.py           (Network topology)
-│── test_validation.py    (Validation script)
+│── regression_test.py    (Validation script)
 │── README.md
 │── Output/
 
@@ -83,7 +83,7 @@ Expected:
 ---
 
 ## 🧪 Validation (Regression Test)
-sudo python3 test_validation.py
+sudo python3 regression_test.py
 
 Expected:
 - Drop rule exists
